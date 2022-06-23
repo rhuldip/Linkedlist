@@ -19,5 +19,23 @@ The first node is called as the head of the LinkedList. We always keep it safe w
 Node head = new Node(1, null);
 ```
 #### Applications
-* It is mostly used for implementing Stacks and Queues.
+* It is mostly used for implementing Stacks and Queues
+* To prevent the collision between the data in the hash map, we use a singly linked list
+
+### Circular LinkedList
+The last node points to the first node making a circle
+#### Applications
+* Round Robin scheduling technique in games/ applications
+* Circular Escalators
+
+### Doubly LinkedList
+```java
+class Node {
+  int data;
+  Node prev, next;
+}
+```
+Each node has two pointers, one points to previous node and other to the next node
+#### Applications
+* Photo Gallery where after the end of photo gallery we can go back only
 * 
