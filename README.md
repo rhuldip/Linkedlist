@@ -38,4 +38,11 @@ class Node {
 Each node has two pointers, one points to previous node and other to the next node
 #### Applications
 * Photo Gallery where after the end of photo gallery we can go back only
-* 
+* Brower back and next button navigation
+
+### Circular Doubly LinkedList
+Doubly LinkedList where the head prev points to the tail and the tail next points to the head
+#### Applications
+* Implementation of advanced data structures like Fibonacci Heap
+* Music Player
+* Photo Gallery
