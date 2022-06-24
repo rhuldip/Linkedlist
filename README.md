@@ -46,3 +46,23 @@ Doubly LinkedList where the head prev points to the tail and the tail next point
 * Implementation of advanced data structures like Fibonacci Heap
 * Music Player
 * Photo Gallery
+### Unrolled LinkedList
+```java
+class UnrolledNode{
+  int data;
+  UnrolledNode prev, next;
+}
+
+class UnrolledBlock{
+  int count;
+  UnrolledNode head;
+  UnrolledBlock next;
+}
+
+class UnrolledLinkedList{
+  int maxCapacityOfEachBlock;
+  UnrolledBlock head;
+}
+```
+Unrolled LinkedList is used to 
+References - https://www.topcoder.com/thrive/articles/unrolled-linked-list
