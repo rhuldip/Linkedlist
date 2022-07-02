@@ -49,20 +49,21 @@ Doubly LinkedList where the head prev points to the tail and the tail next point
 ### Unrolled LinkedList
 ```java
 class UnrolledNode{
-  int data;
-  UnrolledNode prev, next;
-}
-
-class UnrolledBlock{
-  int count;
-  UnrolledNode head;
-  UnrolledBlock next;
-}
-
-class UnrolledLinkedList{
-  int maxCapacityOfEachBlock;
-  UnrolledBlock head;
+  int[] arr;
+  int noOfElements;
+  UnrolledNode next;
 }
 ```
-Unrolled LinkedList is used to 
-References - https://www.topcoder.com/thrive/articles/unrolled-linked-list
+Unrolled LinkedList is a variation of LinkedList where multiple elements are kept inside a Node.
+An array is maintained which keeps data. Usually the size of array is kept in such a way that the entire node fills a single cache line.
+### Pros-
+Since elements the stored in an array and since the array boost cache performance because of spatial locality, the search is faster.
+Less overload because less number of next pointer are created.
+Performance for operation(Insertion and Deletion) is better since we can easy find the position where we need to insert or delete by skipping the entire node based on noOfElements in that node.
+
+
+References -
+https://en.wikipedia.org/wiki/Unrolled_linked_list
+https://brilliant.org/wiki/unrolled-linked-list/
+https://www.geeksforgeeks.org/difference-between-spatial-locality-and-temporal-locality/
+
